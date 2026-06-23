@@ -69,7 +69,8 @@ struct TrajInfo
     double stepLen[3] = {0.0,0.0,0.0};
     Eigen::Matrix<double, 3, 4> toeInit;
     Eigen::Matrix<double, 3, 4> toeFinal;
-    Eigen::Matrix<double, 3, 1> desVel; // Meant to be the desired commanded velocity by the user. NOT by an MPC. For example, a joystick input.
+    Eigen::Matrix<double, 3, 1> desVel;
+    double domLen = 0.0; // Meant to be the desired commanded velocity by the user. NOT by an MPC. For example, a joystick input.
 };
 
 struct LLInfo{

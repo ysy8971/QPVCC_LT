@@ -1,6 +1,6 @@
 <mujoco model="A1_Robot">
-    <compiler angle="radian" meshdir="/home/kavehakbarihamed/raisim/workspace/A1_DeePC/rsc/meshes" 
-        texturedir="/home/kavehakbarihamed/raisim/workspace/A1_DeePC/rsc"/>
+    <compiler angle="radian" meshdir="/home/soonyong/raisim_workspace/QPVCC/rsc/A1/meshes" 
+        texturedir="/home/soonyong/raisim_workspace/QPVCC/rsc/A1"/>
     <size njmax="500" nconmax="100" />
     <option gravity="0 0 -9.806" solver="Newton" tolerance="1e-12" impratio="100" timestep="0.001">
         <flag sensornoise="disable"/>
@@ -23,17 +23,17 @@
     <asset>
         <mesh name="trunk"        file="trunk.STL"       />
         <mesh name="hip"          file="hip.STL"         />
-        <mesh name="thigh_mirror" file="thigh_right.STL" />
+        <mesh name="thigh_mirror" file="thigh_mirror.STL" />
         <mesh name="calf"         file="calf.STL"        />
-        <mesh name="thigh"        file="thigh_left.STL"  />
+        <mesh name="thigh"        file="thigh.STL"  />
         <mesh name="scaled_trunk" file="trunk.STL"       scale ="1.15 1.15 1.15"/>
     </asset>
 
     <asset>
         <!-- <texture type="skybox" builtin="gradient" rgb1="0.6 0.6 0.6" rgb2="0.6 0.6 0.6" 
             width="512" height="512"/> -->
-        <texture type="skybox" builtin="none" file="desert.png" 
-            gridsize="3 4" gridlayout = ".U..LFRB.D.." />
+        <!-- <texture type="skybox" builtin="none" file="desert.png" 
+            gridsize="3 4" gridlayout = ".U..LFRB.D.." /> -->
         <texture name="texplane" type="2d" builtin="checker" rgb1="0.55 0.55 0.55" rgb2="0.42 0.42 0.42" 
             width="512" height="512"/>
         <material name="matplane" texture="texplane" texrepeat="1 1" texuniform="true"

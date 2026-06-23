@@ -1,4 +1,4 @@
-# Install script for directory: /home/trec/WorkRaj/raisim_legged/QPVCC
+# Install script for directory: /home/soonyong/raisim_workspace/QPVCC
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/trec/WorkRaj/raisim_legged/QPVCC/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/soonyong/raisim_workspace/QPVCC/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

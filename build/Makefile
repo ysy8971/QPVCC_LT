@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/trec/WorkRaj/raisim_legged/QPVCC
+CMAKE_SOURCE_DIR = /home/soonyong/raisim_workspace/QPVCC
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/trec/WorkRaj/raisim_legged/QPVCC/build
+CMAKE_BINARY_DIR = /home/soonyong/raisim_workspace/QPVCC/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/trec/WorkRaj/raisim_legged/QPVCC/build/CMakeFiles /home/trec/WorkRaj/raisim_legged/QPVCC/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/soonyong/raisim_workspace/QPVCC/build/CMakeFiles /home/soonyong/raisim_workspace/QPVCC/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/trec/WorkRaj/raisim_legged/QPVCC/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/soonyong/raisim_workspace/QPVCC/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -193,6 +193,19 @@ wrapper: cmake_check_build_system
 wrapper/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/wrapper.dir/build.make CMakeFiles/wrapper.dir/build
 .PHONY : wrapper/fast
+
+#=============================================================================
+# Target rules for targets named Run_Sim
+
+# Build rule for target.
+Run_Sim: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Run_Sim
+.PHONY : Run_Sim
+
+# fast build rule for target.
+Run_Sim/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Run_Sim.dir/build.make CMakeFiles/Run_Sim.dir/build
+.PHONY : Run_Sim/fast
 
 #=============================================================================
 # Target rules for targets named mujoco_wrapper
@@ -556,6 +569,30 @@ params/Parameters.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/params_lib.dir/build.make CMakeFiles/params_lib.dir/params/Parameters.cpp.s
 .PHONY : params/Parameters.cpp.s
 
+src/A1_Sim.o: src/A1_Sim.cpp.o
+.PHONY : src/A1_Sim.o
+
+# target to build an object file
+src/A1_Sim.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Run_Sim.dir/build.make CMakeFiles/Run_Sim.dir/src/A1_Sim.cpp.o
+.PHONY : src/A1_Sim.cpp.o
+
+src/A1_Sim.i: src/A1_Sim.cpp.i
+.PHONY : src/A1_Sim.i
+
+# target to preprocess a source file
+src/A1_Sim.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Run_Sim.dir/build.make CMakeFiles/Run_Sim.dir/src/A1_Sim.cpp.i
+.PHONY : src/A1_Sim.cpp.i
+
+src/A1_Sim.s: src/A1_Sim.cpp.s
+.PHONY : src/A1_Sim.s
+
+# target to generate assembly for a file
+src/A1_Sim.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Run_Sim.dir/build.make CMakeFiles/Run_Sim.dir/src/A1_Sim.cpp.s
+.PHONY : src/A1_Sim.cpp.s
+
 src/DataLog.o: src/DataLog.cpp.o
 .PHONY : src/DataLog.o
 
@@ -685,6 +722,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Run_Mujoco"
+	@echo "... Run_Sim"
 	@echo "... ctrl_lib"
 	@echo "... dyn_lib"
 	@echo "... mujoco_wrapper"
@@ -734,6 +772,9 @@ help:
 	@echo "... params/Parameters.o"
 	@echo "... params/Parameters.i"
 	@echo "... params/Parameters.s"
+	@echo "... src/A1_Sim.o"
+	@echo "... src/A1_Sim.i"
+	@echo "... src/A1_Sim.s"
 	@echo "... src/DataLog.o"
 	@echo "... src/DataLog.i"
 	@echo "... src/DataLog.s"

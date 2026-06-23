@@ -48,7 +48,7 @@ void setupCallback() {
     vis->getCameraMan()->setTopSpeed(5);
 }
 
-void disturbance(std::vector<raisim::ArticulatedSystem *> A1,std::map<std::__cxx11::string, raisim::VisualObject> &objList,size_t start,size_t stop,size_t ctrlTick){
+void disturbance(std::vector<raisim::ArticulatedSystem *> A1,std::map<std::string, raisim::VisualObject> &objList,size_t start,size_t stop,size_t ctrlTick){
     Eigen::VectorXd pos = Eigen::MatrixXd::Zero(TOTAL_DOF+1,1);
     Eigen::VectorXd vel = Eigen::MatrixXd::Zero(TOTAL_DOF,1);
     A1.back()->getState(pos, vel);

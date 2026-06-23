@@ -14,15 +14,15 @@ set(USE_QPSWIFT TRUE) # Alternatively, OSQP is used
 if($ENV{USER} STREQUAL "kaveh" OR $ENV{USER} STREQUAL "unitree") # Here to prevent the need to change CMake every time you run exp. 
     set(SIMULATION FALSE)
 else()
-    set(MUJOCO_PATH /home/kavehakbarihamed/mujoco210) # Path to mujoco 210 <--- must be 210
+    set(MUJOCO_PATH /home/soonyong/mujoco210) # Path to mujoco 210 <--- must be 210
     set(MUJOCO_LIB_PATH ${MUJOCO_PATH}/bin) # Path to the bin folder in mujoco
 	set(SIMULATION TRUE)
 endif()
 # set(SIMULATION FALSE)
 
 # ===== RaiSim and RaiSimOgre ===== #
-find_package(raisim PATHS "/home/kavehakbarihamed/raisim/build/lib/cmake/raisim")
-find_package(raisimOgre CONFIG PATHS "/home/kavehakbarihamed/raisim/build/share/raisimOgre/cmake")
+find_package(raisim PATHS "/home/soonyong/raisim_workspace/build/lib/cmake/raisim")
+find_package(raisimOgre CONFIG PATHS "/home/soonyong/raisim_workspace/build/share/raisimOgre/cmake")
 
 # ===== General packages and UT SDk ===== #
 find_package(Eigen3 REQUIRED HINTS ${Eigen3_HINT})
